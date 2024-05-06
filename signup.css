@@ -1,0 +1,53 @@
+.card{
+    height: 400px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+ion-icon{
+    font-size: 22px;
+}
+.card::after{
+    content: '';
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background-image: conic-gradient(transparent,transparent,transparent,#9800d4);
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: -2s;
+}
+
+.card::before{
+    content: '';
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background-image: conic-gradient(transparent,transparent,transparent,#009de6);
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.card span{
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: black;
+    z-index: 1;
+}

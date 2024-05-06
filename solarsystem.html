@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .axis1{
+            animation: orbit-1 5s linear infinite;
+        }
+        @keyframes orbit-1 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .axis2{
+            animation: orbit-2 6s linear infinite;
+        }
+        @keyframes orbit-2 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="bg-green-600 flex items-center justify-center min-h-[100vh]">
+    <div class="sun">
+        <img class="h-[90px] w-[90px]" src="sun.png" alt="">
+    </div>
+    <div class="axis1 absolute h-[133px] w-[133px] border-[1px] border-dotted border-white rounded-full">
+        <div class="mercury h-[22px] w-[22px] absolute left-[88px] right-[370px]">
+            <img src="mercury.png" alt="mercury photo">
+        </div>
+    </div>
+    <div class="axis2 absolute h-[200px] w-[200px] border-[1px] border-dotted border-white rounded-full">
+        <div class="venus h-[25px] w-[25px] absolute left-[88px] right-[370px]">
+            <img src="venus.png" alt="venus photo">
+        </div>
+    </div>
+</body>
+</html>
